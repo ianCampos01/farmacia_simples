@@ -41,7 +41,7 @@ Projeto de site simples e responsivo para farmácias ou pequenos negócios, onde
 ## 🛠 Tecnologias Usadas
 
 - HTML5
-- CSS3 com [Bootstrap 5](https://getbootstrap.com/)
+- Tailwiind
 - JavaScript (vanilla)
 
 ---

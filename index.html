@@ -134,8 +134,9 @@
     const telefone = document.getElementById('clienteTelefone').value;
     const pedido = document.getElementById('clientePedido').value;
 
+    shopNumber = 81973201582;
     const msg = `Olá! Meu nome é ${nome}. Gostaria de pedir: ${pedido}. Entregar no endereço: ${endereco}. Meu telefone é ${telefone}.`;
-    const url = `https://wa.me/55${telefone.replace(/\D/g, '')}?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/55${shopNumber}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   });
 </script>

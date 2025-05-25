@@ -142,7 +142,7 @@
     const pedido = document.getElementById('clientePedido').value;
     const payment = document.getElementById('formaPagamento').value
 
-    shopNumber = 819732011582;
+    shopNumber = 81989126781;
     const msg = `Nome: ${nome}\n📝Pedido: ${pedido}\n🗺️Endereço: ${endereco}\n☎️Telefone: ${telefone}\nPagamento: ${payment}`;
     const url = `https://wa.me/55${shopNumber}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');

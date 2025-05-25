@@ -104,6 +104,13 @@
       <input type="text" id="clienteEndereco" class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-400" placeholder="Endereço completo" required />
       <input type="tel" id="clienteTelefone" class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-400" placeholder="WhatsApp (com DDD)" required />
       <input type="text" id="clientePedido" class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-400" placeholder="Seu pedido (ex: 2 Camisetas Pretas)" required />
+      <select id="formaPagamento" class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 text-white" required>
+        <option value="" disabled selected>Escolha a forma de pagamento</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Cartao credito">Cartão de Crédito</option>
+        <option value="Cartao debito">Cartão de Débito</option>
+        <option value="Pix">PIX</option>
+      </select>
       <button type="submit" class="w-full bg-green-500 text-white font-semibold py-3 rounded-xl hover:bg-green-600 transition animate-pulse">
         Enviar Pedido via WhatsApp
       </button>
@@ -133,9 +140,10 @@
     const endereco = document.getElementById('clienteEndereco').value;
     const telefone = document.getElementById('clienteTelefone').value;
     const pedido = document.getElementById('clientePedido').value;
+    const payment = document.getElementById('formaPagamento').value
 
-    shopNumber = 81973201582;
-    const msg = `Olá! Meu nome é ${nome}. Gostaria de pedir: ${pedido}. Entregar no endereço: ${endereco}. Meu telefone é ${telefone}.`;
+    shopNumber = 819732011582;
+    const msg = `Nome: ${nome}\n📝Pedido: ${pedido}\n🗺️Endereço: ${endereco}\n☎️Telefone: ${telefone}\nPagamento: ${payment}`;
     const url = `https://wa.me/55${shopNumber}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   });
